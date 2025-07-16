@@ -59,7 +59,7 @@ export default function PlayMateLanding() {
       <section className="relative overflow-hidden">
         <img 
           className="w-full h-screen object-cover" 
-          src="/landing.png" 
+          src="/icons/landing.png" 
           alt="PlayMate Landing" 
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -225,6 +225,113 @@ export default function PlayMateLanding() {
           </div>
         </div>
       </section>
+      <section className="py-20 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="flex flex-col lg:flex-row items-center gap-16">
+      {/* Image Side */}
+      <div className="w-full lg:w-1/2">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-20"></div>
+          <div className="relative">
+            <img 
+              src="/tournament.png" 
+              alt="Tournaments & Teams" 
+              className="w-full h-80 object-cover rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-300" 
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Content Side */}
+      <div className="w-full lg:w-1/2 space-y-8">
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Compete & Connect on
+            <span className="block text-purple-600">PlayMate</span>
+          </h1>
+
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 shadow-lg border border-purple-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">🏆 Join Tournaments</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Explore local and online tournaments. Register easily, track match schedules, and rise through the ranks with every win.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-pink-50 to-yellow-50 rounded-2xl p-6 shadow-lg border border-pink-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">🤝 Form Teams & Challenge</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Create your own team, invite friends, and challenge others in your city. Build rivalries and make a name for yourself!
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => router.push('/tournaments')}
+            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
+          >
+            Explore Tournaments
+            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section className="py-20 bg-white">
+  <div className="container mx-auto px-6">
+    <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
+      {/* Image Side */}
+      <div className="w-full lg:w-1/2">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl blur opacity-20"></div>
+          <div className="relative">
+            <img 
+              src="/teamlogo.png" 
+              alt="Team Management" 
+              className="w-full h-80 object-cover rounded-3xl shadow-2xl hover:shadow-3xl transition-shadow duration-300" 
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Content Side */}
+      <div className="w-full lg:w-1/2 space-y-8">
+        <div className="space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Build Your Squad on
+            <span className="block text-blue-600">PlayMate</span>
+          </h1>
+
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 shadow-lg border border-blue-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">👥 Create & Manage Teams</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Build your own team, set your roster, assign roles, and manage invites. It's your squad, your rules.
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-50 to-indigo-50 rounded-2xl p-6 shadow-lg border border-cyan-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">⚔️ Challenge Other Teams</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Find other teams nearby and throw down challenges. Organize friendlies or compete for bragging rights and leaderboard glory.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => router.push('/teams')}
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center gap-2 group"
+          >
+            Build Your Team
+            <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 text-white">
@@ -243,6 +350,7 @@ export default function PlayMateLanding() {
           </div>
         </div>
       </section>
+     
     </div>
   );
 }

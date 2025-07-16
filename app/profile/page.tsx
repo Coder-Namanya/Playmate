@@ -3,11 +3,14 @@
 import { useState, useEffect } from 'react';
 import { useUser } from '@clerk/nextjs';
 import Image from 'next/image';
+
 import { uploadImage } from '@/utils/uploadprofileimage';
 import { Camera, Edit3, Save, X, User, Phone, Users, Briefcase } from 'lucide-react';
 
 export default function ProfilePage() {
   const { user } = useUser();
+  
+  
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
